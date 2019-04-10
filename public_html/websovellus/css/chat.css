@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+#chatBox {
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+}
+
+#myChatForm {
+    text-align: center;
+}
+
+input[type = "text"] {
+    width: 40%;
+    padding: 2px;
+    margin: 3px;
+
+}
+
+textarea {
+    width: 40%;
+    padding: 2px;
+    margin: 3px;
+}
+
+#sendMessageBtn {
+    width: 40%;
+}
+#chatBox{
+overflow-y: scroll;
+background-color: rgb(216, 226, 226);
+ }
