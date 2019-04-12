@@ -43,7 +43,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="logo" href="index.php"><img src="img/logo.svg" alt="Logo"></a>
+        <a class="logo" href="index.php"><img src="img/logonew.png" style="width:60px;height:60px"; alt="Logo"></a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -59,7 +59,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-6">
-          <a href="index.php"><img src="img/logo.svg" alt="Logo"></a>
+          <a href="index.php"><img src="img/logonew.png" style="width:200px;height:200px";  alt="Logo"></a>
 
 
         </div>
@@ -89,7 +89,7 @@
           <h1 class="wow fadeIn">
           <?php
             if (isset($_SESSION['u_id'])) {
-                echo " You are loged in and now you can do stuff and see stuff ";
+                echo " You are logged in and now you can do stuff and see stuff ";
             } else {
              echo ' <h1 class="wow fadeIn">A free landing page theme </h1>';
             }

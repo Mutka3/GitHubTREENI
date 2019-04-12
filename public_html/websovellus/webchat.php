@@ -12,10 +12,10 @@ include("includes/db.inc.php");
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+<link href='https://fonts.googleapis.com/css?family=Capriola' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
 <link rel="stylesheet" href="css/chat.css">
 <script>
 
@@ -55,7 +55,7 @@ $(document).ready(function(e) {
 <body>
     
 <div class="container-fluid">
-    <h3 class="text-center">Live Chilld Chat</h3>
+    <h3 class="text-center">Live GoldMind Chat</h3>
         <div class="well" id="chatBox">
             <div id="chatDisplay"></div>
         </div>
