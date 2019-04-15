@@ -8,7 +8,7 @@ include("includes/db.inc.php");
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Chilld Chat</title>
+  <title>Chill Chat</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -55,7 +55,7 @@ $(document).ready(function(e) {
 <body>
     
 <div class="container-fluid">
-    <h3 class="text-center">Live GoldMind Chat</h3>
+    <h3 class="text-center">Gold Mind Chat</h3>
         <div class="well" id="chatBox">
             <div id="chatDisplay"></div>
         </div>
