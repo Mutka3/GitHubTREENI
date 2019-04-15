@@ -8,7 +8,7 @@ include("includes/db.inc.php");
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Chill Chat</title>
+  <title>Gold Mind Chat</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
