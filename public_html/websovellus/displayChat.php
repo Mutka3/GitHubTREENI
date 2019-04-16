@@ -4,6 +4,8 @@
 
 include("includes/db.inc.php");
 
+
+
     $query = "SELECT * FROM chatroom";
     $run = mysqli_query($conn, $query);
     while ($row = mysqli_fetch_array($run)) {
@@ -23,3 +25,4 @@ include("includes/db.inc.php");
 
 
 ?>
+

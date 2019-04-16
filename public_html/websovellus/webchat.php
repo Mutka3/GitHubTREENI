@@ -8,7 +8,7 @@ include("includes/db.inc.php");
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Gold Mind Chat</title>
+  <title>Gold Mind Chat !</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -27,6 +27,8 @@ $(document).ready(function(e) {
         type: 'POST',
         success: function(data) {
             $("#chatDisplay").html(data);
+
+            
         }
     });
 }
@@ -45,9 +47,11 @@ $(document).ready(function(e) {
                 uname:name,
                 umessage:message
             }
+            
         });
     });
 });
+
 
 </script>
 </head>
@@ -59,8 +63,13 @@ $(document).ready(function(e) {
         <div class="well" id="chatBox">
             <div id="chatDisplay"></div>
         </div>
+
+<form id="usernm">
+<input type="text" id="user_name" placeholder="Enter your name:" >
+</form>
+
         <form id="myChatForm">
-                <input type="text" id="user_name" placeholder="Enter your name:"> <br>
+               <!-- <input type="text" id="user_name" placeholder="Enter your name:">--> <br>
                 <textarea name="message" id="message" placeholder="Enter your message here..." cols="30" rows="2"></textarea> <br>
                 <button type="button" class="btn btn-success btn-lg" id="sendMessageBtn">Send Message</button>
         </form>

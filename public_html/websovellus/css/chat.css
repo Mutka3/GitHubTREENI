@@ -14,6 +14,10 @@ body {
 
 }
 
+#usernm {
+    text-align: center;
+}
+
 #myChatForm {
     text-align: center;
 }

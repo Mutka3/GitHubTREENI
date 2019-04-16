@@ -2,9 +2,37 @@
     include_once 'header.php';
 ?>
 
-  <div class="mouse-icon hidden-xs">
-    <div class="scroll"></div>
-  </div>
+
+
+
+<?php
+//When user is logged in
+            if(isset($_SESSION['u_id'])) {
+               echo ' 
+               <div class="mouse-icon hidden-xs">
+                <div class="scroll"></div>
+                  </div> 
+                  
+                  
+   
+
+                  
+                  
+                  
+                  ';
+
+
+// WHEN NOT LOGGED IN 
+            } else {
+                echo'<form action="includes/login.inc.php" method="POST">
+                <input type="text" name="uid" placeholder="Username/e-mail">
+                <input type="password" name="pwd" placeholder="password">
+                <button type="submit" name="submit">Sign in</button>
+            </form>
+            <a href="signup.php">Sign up</a>
+
+
+ 
 
   <section id="be-the-first" class="pad-xl">
     <div class="container">
@@ -169,7 +197,8 @@
 
     </div>
   </section>
-
+  ';            }
+  ?>
   <?php
     include_once 'footer.php';
   ?>
