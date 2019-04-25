@@ -1,38 +1,28 @@
 <?php
-    include_once 'header.php';
+    
+    session_start();
 ?>
 
-
-
-
 <?php
-//When user is logged in
-            if(isset($_SESSION['u_id'])) {
-               echo ' 
-               <div class="mouse-icon hidden-xs">
-                <div class="scroll"></div>
-                  </div> 
-                  
-                  
-   
-
-                  
-                  
-                  
-                  ';
+if (isset($_SESSION['u_id'])) {
+  echo '<form action="includes/logout.inc.php" method="POST">
+  <button type="submit" name="submit">Logout</button>
+</form>';
+include_once 'chartsU.php';
 
 
-// WHEN NOT LOGGED IN 
-            } else {
-                echo'<form action="includes/login.inc.php" method="POST">
-                <input type="text" name="uid" placeholder="Username/e-mail">
-                <input type="password" name="pwd" placeholder="password">
-                <button type="submit" name="submit">Sign in</button>
-            </form>
-            <a href="signup.php">Sign up</a>
 
 
- 
+
+
+} else {
+
+  include_once 'header.php';
+
+    echo ' <h1 class="wow fadeIn">A free landing page theme </h1>
+  <div class="mouse-icon hidden-xs">
+    <div class="scroll"></div>
+  </div>
 
   <section id="be-the-first" class="pad-xl">
     <div class="container">
@@ -197,20 +187,25 @@
 
     </div>
   </section>
-  ';            }
-  ?>
-  <?php
+  ';
+}
+
+?>
+
+<?php
     include_once 'footer.php';
   ?>
 
-  <!-- Javascript
+<!-- Javascript
     ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
-  <script src="js/wow.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+</script>
+<script src="js/wow.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 
 
 </body>

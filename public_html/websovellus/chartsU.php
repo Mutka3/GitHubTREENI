@@ -2,8 +2,30 @@
 <html>
 <head>
 <title>User Pulse Data</title>
+
+<style>
+
+body, html {
+  height: 100%;
+}
+
+.parallax { 
+  /* The image used */
+  background-image: url("img/header-bg.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+</style>
 </head>
-<body >
+<body class = "parallax">
 <?Php
 require "config.php";// Database connection
 
