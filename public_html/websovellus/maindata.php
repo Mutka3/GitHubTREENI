@@ -1,70 +1,13 @@
 <?php
     
     session_start();
+
 ?>
 
 <?php
 if (isset($_SESSION['u_id'])) {
-  echo '
-<head>
-    <title>GoldMind</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="boxcss.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
-<div id="header">
-        GOLDMIND
-    </div>
-
-<div class="pikkul">
-<div id="green">
-<form action="includes/logout.inc.php" method="POST">
-    <button  type="submit" name="submit"> 
-            <a class="btn1" href="#">
-                <i class="fas fa-sign-out-alt"></i>
-            </a>
-    </button>
-</form>
-        
-            
-        </div>
-
-
-        <div id="blue">
-            <a class="btn1" href="#">
-                <i class="fas fa-home"></i>
-            </a>
-        </div>
-        <div id="yellow">
-            <a class="btn" href="loggedinpage.php">
-                <i class="fas fa-book-medical"></i>
-            </a>
-        </div>
-
-        <div id="grey">
-            <a class="btn" href="maindata.php">
-                <i class="fas fa-heartbeat"></i></i>
-            </a>
-        </div>
-
-        <div id="brown">
-            <a class="btn" href="mainchart">
-                <i class="fas fa-chart-bar"></i>
-            </a>
-        </div>
-        <div id="violet">
-            <a class="btn" href="webchat.php">
-                <i class="far fa-comments"></i>
-            </a>
-        </div>
-    </div>
-    ';
-
-
-
-
-
-
+    
+     include 'dataForMain.php';
 
 } else {
 
