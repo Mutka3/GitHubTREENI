@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 
 /*check if submitted*/
 if (isset($_POST['submitted'])) {
@@ -9,9 +9,13 @@ if (isset($_POST['submitted'])) {
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $time = $_POST['time'];
+
+$username =  $_SESSION['u_email'];
+//$username = $_POST[$_SESSION['u_first']];
+
 //$lname = date('Y-m-d H:i:s'); // Convert string to date format.
 //var for database
-$sqlinsert = "INSERT INTO tbl_sensors_data (sensors_temperature_data, sensors_data_date, sensors_data_time) VALUES ('$fname', '$lname', '$time') ";
+$sqlinsert = "INSERT INTO tbl_sensors_data (sensors_temperature_data, sensors_data_date, sensors_data_time, usermail) VALUES ('$fname', '$lname', '$time', '$username') ";
 //
 if(!mysqli_query($conn, $sqlinsert)) {
 die('error inserting new record');
