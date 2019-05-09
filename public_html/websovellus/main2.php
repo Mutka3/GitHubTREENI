@@ -1,11 +1,16 @@
 <?php
     
     session_start();
+    
 ?>
+
+
 
 <?php
 if (isset($_SESSION['u_id'])) {
+
   echo '
+
 <head>
     <title>GoldMind</title>
     <meta charset="UTF-8">
@@ -35,6 +40,8 @@ if (isset($_SESSION['u_id'])) {
                 <i class="fas fa-home"></i>
             </a>
         </div>
+
+        <h2>Welcome </h2>
         <div id="yellow">
             <a class="btn" href="loggedinpage.php">
                 <i class="fas fa-book-medical"></i>

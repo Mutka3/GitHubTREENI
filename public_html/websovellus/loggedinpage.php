@@ -2,6 +2,8 @@
 
 	session_start();
 
+	$user =  $_SESSION['u_first'];
+
 	$message = "";
 
 	
@@ -76,7 +78,7 @@ GOLDMIND
 
 
 
-
+<h1> <?php echo $user ?> Diary</h1>
 
 	<div  id="message">
 		

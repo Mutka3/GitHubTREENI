@@ -1,37 +1,42 @@
 <?php
 include("includes/db.inc.php");
 
+$user =  $_SESSION['u_first'];
+$usermail =  $_SESSION['u_email'];
 
 
+ $sql = "SELECT sensors_temperature_data,
+ UNIX_TIMESTAMP(CONCAT_WS('', sensors_data_date)) AS date
+ FROM tbl_sensors_data WHERE usermail='$usermail'
+ ORDER BY sensors_data_date DESC, sensors_data_time DESC ";
 
+$query = $sql;
 
-$query = '
-SELECT sensors_temperature_data, 
-UNIX_TIMESTAMP(CONCAT_WS(" ", sensors_data_date, sensors_data_time)) AS datetime 
-FROM tbl_sensors_data 
-ORDER BY sensors_data_date DESC, sensors_data_time DESC
-';
-$result = mysqli_query($conn, $query);
-$rows = array();
-$table = array();
+ $result = mysqli_query($conn, $query);
+ $rows = array();
+ $table = array();
+ 
+ $table['cols'] = array(
+  array (
+   'label' => 'Date Time', 
+   'type' => 'date'
 
-$table['cols'] = array(
- array (
-  'label' => 'Date Time', 
-  'type' => 'datetime'
- ),
- array(
-  'label' => 'Heart rate (bpm)', 
-  'type' => 'number'
- )
-);
+  ),
+  array(
+   'label' => 'Heart rate (bpm)', 
+   'type' => 'number'
+  )
+ );
 
-while($row = mysqli_fetch_array($result))
-{
- $sub_array = array();
- $datetime = explode(".", $row["datetime"]);
+ while ($row = mysqli_fetch_array($result))
+ {
+
+ //
+
+     $sub_array = array();
+ $date = explode(".", $row["date"]);
  $sub_array[] =  array(
-      "v" => 'Date(' . $datetime[0] . '000)'
+      "v" => 'Date(' . $date[0] . '000)'
      );
  $sub_array[] =  array(
       "v" => $row["sensors_temperature_data"]
@@ -128,7 +133,7 @@ $jsonTable = json_encode($table);
 
         <div class="page-wrapper">
             <br />
-            <h2 text-align="center" color= "white">Your heart rate chart </h2>
+            <h2 text-align="center" color= "white">Your heart rate chart <?php echo $user ?> </h2>
             <div id="line_chart" style="width: 100%; height: 500px"></div>
         </div>
 </div>
