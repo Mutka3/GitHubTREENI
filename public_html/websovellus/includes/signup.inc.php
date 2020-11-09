@@ -26,7 +26,7 @@ if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)
     } else {
         //Check if email is valid
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            header("Location: ../signup.php?signup=email");
+            header("Location: ../main2.php?signup=email");
             exit();
         } else {
             $sql= "SELECT * FROM users WHERE user_uid='$uid'";
@@ -34,7 +34,7 @@ if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)
             $resultCheck=mysqli_num_rows($result);
 
             if ($resultCheck > 0){
-                header("Location: ../signup.php?signup=usertaken");
+                header("Location: ../main2.php?signup=usertaken");
                 exit();
             } else {
                 //Hashing the password
@@ -43,7 +43,7 @@ if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)
                     $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) 
                     VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd' );";
                    mysqli_query($conn, $sql);
-                   header("Location: ../signup.php?signup=success");
+                   header("Location: ../main2.php?signup=success");
                    exit();
             }
         }
@@ -51,7 +51,7 @@ if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)
 }
 
 } else {
-    header("Location: ../signup.php");
+    header("Location: ../main2.php");
     exit();
 }
     

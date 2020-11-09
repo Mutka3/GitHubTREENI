@@ -13,9 +13,9 @@ include("includes/db.inc.php");
 ?>
   
         <p>
-        <span style="color: red;"><?php echo $row['name']. ":";?> </span>
-        <span style="color: blue;"><?php echo $row['message'];?> </span>
-        <span style="float:right;"><?php echo $row['time'];?> </span>
+        <span style="color: #4caf50;"><?php echo $row['name']. ":";?> </span>
+        <span style="color: white;"><?php echo $row['message'];?> </span>
+        <span style="color: #ADD8E6; float:right;"><?php echo $row['time'];?> </span>
         </p>
 
        <?php }
